@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Column Layout Page</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #000000;
+            color: #ffffff;
+            border-radius: 8px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        /* Container for Two-Column Layout */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            flex-wrap: wrap;
+        }
+
+        /* Column Styling */
+        .column {
+            background-color: #f8f8f8;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .column h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #000000;
+        }
+
+        .column p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #333333;
+        }
+
+        /* Button Styling */
+        .cta-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #2b58ff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #e55a4b;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #000000;
+            color: #ffffff;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            font-size: 1.1em;
+        }
+        
+        .cta-button {
+  padding: 10px 20px;
+  background-color: #2b58ff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+}
+
+.cta-button:hover {
+  background-color: #e55a4b;
+}
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Our Website!</h1>
+    </header>
+
+    <!-- Content Section with Two Columns -->
+    <section class="container">
+        <!-- Column 1 -->
+        <div class="column">
+                <h2>About Us</h2>
+                <p>We are dedicated to providing top-notch tutorials and resources for learning HTML and web development. Our content is designed to help you understand the fundamentals and advance your skills in creating web pages.</p>
+                <p>Our mission is to make learning HTML accessible to everyone, with clear explanations, examples, and hands-on practice.</p>
+            </div>
+
+        <!-- Column 2 -->
+        <div class="column">
+                <h2>Our Goals</h2>
+                <p>We strive to create an engaging and supportive learning environment where everyone can learn and improve their web development skills. Our goal is to become your trusted source for HTML tutorials and web development guidance.</p>
+                <p>Join us as we continue to expand our tutorials, covering everything from the basics to advanced techniques.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Join Us Now!</p><a href="homepg.html" class="cta-button">Back Home</a>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms and Input Tutorial</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 40px 0;
+        }
+
+        /* Container for centering content */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        /* Column Styling */
+        .column {
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            flex: 1;
+            min-width: 330px;
+            max-width: 280px;
+            text-align: center;
+        }
+
+        /* Title Style */
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #2b58ff;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Input and Form Styling */
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1.1em;
+        }
+
+        input[type="submit"] {
+            background-color: #2b58ff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e55a4b;
+        }
+
+        /* Code Block Styling */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #333;
+            overflow-x: auto;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.2em;
+            color: #777;
+        }
+
+        .cta-button {
+            padding: 10px 20px;
+            background-color: #2b58ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+
+        .cta-button:hover {
+            background-color: #e55a4b;
+        }
+
+        /* Try it Yourself Editor */
+        .editor-container {
+            background-color: #f9f9f9;
+            padding: 30px;
+            margin-top: 40px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .editor-container h3 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .editor {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            resize: vertical;
+        }
+
+        .execute-button {
+            padding: 10px 20px;
+            background-color: #2b58ff;
+            color: #fff;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .execute-button:hover {
+            background-color: #1d45b8;
+        }
+
+        .output {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1 style="text-align:center">HTML Forms and Input Tutorial</h1>
+        <p style="text-align:center">Learn how to create forms, use input fields, and handle user data in HTML.</p>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <div class="container">
+
+        <!-- Column 1: What is an HTML Form -->
+        <div class="column">
+            <h2> What is an HTML Form?</h2>
+            <p>An HTML form is used to collect user input. Forms are created using the <code>&lt;form&gt;</code> tag, and various input fields are added to the form to collect data.</p>
+        </div>
+
+        <!-- Column 2: HTML Form Elements -->
+        <div class="column">
+            <h2>HTML Form Elements</h2>
+            <p>HTML forms include several input elements like <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>, and more.</p>
+            <ul>
+                <li><code>&lt;input&gt;</code> – Used for text fields, checkboxes, etc.</li>
+                <li><code>&lt;textarea&gt;</code> – Used for multi-line text input.</li>
+                <li><code>&lt;select&gt;</code> – Used for drop-down menus.</li>
+            </ul>
+        </div>
+
+        <!-- Column 3: HTML Form Example -->
+        <div class="column">
+            <h2>HTML Form </h2>
+            <p>Here's a basic form with various input elements:</p>
+            <pre><code>
+&lt;form action="#" method="post"&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name"&gt;
+
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email"&gt;
+
+  &lt;label for="message"&gt;Message:&lt;/label&gt;
+  &lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;
+
+  &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+            </code></pre>
+        </div>
+
+        <!-- Column 4: More Form Inputs -->
+        <div class="column">
+            <h2>More Form Inputs</h2>
+            <p>HTML forms can include many other input types, such as:</p>
+            <ul>
+                <li><code>&lt;input type="password"&gt;</code> – Used for secure password input.</li>
+                <li><code>&lt;input type="checkbox"&gt;</code> – Allows multiple selections.</li>
+                <li><code>&lt;input type="radio"&gt;</code> – Allows a single selection from a list.</li>
+                <li><code>&lt;input type="date"&gt;</code> – Used to select dates.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Try it Yourself Editor -->
+    <div class="editor-container">
+        <h3>Try it Yourself</h3>
+        <textarea class="editor" id="editor" placeholder="Write your form HTML code here..."></textarea>
+        <br><br>
+        <button class="execute-button" onclick="runHTML()">Run Code</button>
+
+        <div class="output">
+            <h4>Output:</h4>
+            <iframe id="outputFrame"></iframe>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>HTML Forms and Inputs</p><a href="homepg.html" class="cta-button">Back Home</a>
+    </footer>
+
+    <!-- Script to Execute HTML Code -->
+    <script>
+        function runHTML() {
+            var userHTML = document.getElementById("editor").value;
+            var iframe = document.getElementById("outputFrame");
+            var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+            // Write the user's HTML code to the iframe
+            iframeDoc.open();
+            iframeDoc.write
